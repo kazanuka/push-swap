@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 17:39:02 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/25 17:39:32 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/25 17:56:57 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	rra(t_list **a)
 	return (0);
 }
 
-int	rra(t_list **b)
+int	rrb(t_list **b)
 {
 	if (rev_rot(b) == -1)
 		return (-1);
