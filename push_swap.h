@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 13:39:31 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/22 15:43:24 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/25 17:28:43 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,21 @@
 # include "libft/libft.h"
 # include <stdbool.h>
 # include <limits.h> 
+
+# define ARG_ERR "Bad Arguments"
+
+
+
 typedef struct s_stack
 {
-	int	nbr;
-	int index;
-	int	push_cost;
-	bool is_median;
-	bool is_cheapest;
-	struct s_stack	*target;
+	int				index;
+	int				nbr;
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }	t_stack;
 
+void	error(char *error);
+void	liberte(char **slave);
 
 
 #endif

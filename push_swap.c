@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 13:41:25 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/22 15:43:46 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/22 16:12:22 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,21 @@
 
 
 
-
 int main(int argc, char **argv)
 {
 	if(argc == 1)
+		error(ARG_ERR);
+		
+	else if (argc == 2) 
 	{
-		ft_putstr_fd("Error",1);
-		return (1);
+		//Sayılar string halinde verilmiş
+		argv = ft_split(argv[1],' ');
+		
 	}
 	else 
 	{
-		char *strings;
-		char **nums;
-		int i;
-		i = 1;
-		while(i < argc)
-		{
-			if(argv[i + 1])
-				strings = ft_strjoin(argv[i],argv[i + 1]);
-			i++;
-		}
-		nums = ft_split(strings,' ');
-		
+		//Sayılar ayrı ayrı argüman halinde verilirse
+		 
 	}
 	
 	

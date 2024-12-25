@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 15:42:21 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/22 15:42:54 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/22 16:07:08 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,10 @@ void	liberte(char **slave)
 		free(slave[i++]);
 	free(slave);
 }
+
+void error(char *error)
+{
+	ft_putstr_fd(error,1);
+	exit(EXIT_FAILURE);
+}
+
