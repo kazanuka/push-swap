@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 13:39:31 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/25 17:28:43 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/25 17:59:01 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ typedef struct s_stack
 
 void	error(char *error);
 void	liberte(char **slave);
+
+int	rra(t_list **a);
+
+
 
 
 #endif
