@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 13:39:31 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/26 17:16:24 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/26 17:50:24 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	indexer(t_stack **stack);
 void    sort(t_stack **a, t_stack **b);
 
 
-int		is_sorted(t_stack *head);
+int		is_sorted(t_stack *stack);
 
 
 
