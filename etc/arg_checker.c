@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 15:39:56 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/26 15:40:13 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/26 15:59:50 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void check_args(int argc, char **argv)
 	int tmp;
 
 	i = 0;
-	if(argc == 1)
+	if(argc == 1 || (argc == 2 && !argv[1][0]))
 		error(ARG_ERR);
 	else if(argc == 2)
 		argv = ft_split(argv[1],' ');
