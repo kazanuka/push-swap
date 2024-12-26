@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/22 15:42:21 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/26 17:13:02 by fkuyumcu         ###   ########.fr       */
+/*   Created: 2024/12/26 17:14:44 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/12/26 17:16:15 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-void	liberte(char **slave)//free the stack
+void	sort(t_stack **a, t_stack **b)
 {
-	t_stack	*head;
-	t_stack	*tmp;
+    
 
-	head = *slave;
-	while (head)
-	{
-		tmp = head;
-		head = head->next;
-		free(tmp);
-	}
-	free(slave);
+    
 }
-
-void error(char *error)
-{
-	ft_putstr_fd(error,1);
-	exit(EXIT_FAILURE);
-}
-

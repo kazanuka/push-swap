@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   indexer.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/22 15:42:21 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/26 17:13:02 by fkuyumcu         ###   ########.fr       */
+/*   Created: 2024/12/26 17:01:22 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/12/26 17:02:03 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-void	liberte(char **slave)//free the stack
+void indexer(t_stack **stack)
 {
-	t_stack	*head;
-	t_stack	*tmp;
 
-	head = *slave;
-	while (head)
-	{
-		tmp = head;
-		head = head->next;
-		free(tmp);
-	}
-	free(slave);
+
+    
 }
-
-void error(char *error)
-{
-	ft_putstr_fd(error,1);
-	exit(EXIT_FAILURE);
-}
-
