@@ -6,11 +6,11 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 17:39:02 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/25 17:56:57 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/26 13:00:58 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static int	rev_rot(t_list **stack)
 {

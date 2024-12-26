@@ -6,11 +6,11 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 16:26:39 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/25 17:26:20 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/26 13:00:53 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static int push(t_stack **src, t_stack **dest)
 {

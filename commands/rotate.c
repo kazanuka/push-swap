@@ -6,11 +6,11 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 17:32:50 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/25 17:39:28 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/26 13:01:02 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.c"
+#include "../push_swap.c"
 
 static int	rotate(t_list **stack)
 {

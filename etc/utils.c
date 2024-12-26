@@ -6,11 +6,11 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 15:42:21 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/22 16:07:08 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/26 15:39:54 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	liberte(char **slave)
 {

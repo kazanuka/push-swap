@@ -4,7 +4,12 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
-FILES = push_swap.c \
+FILES = ps.c \
+		commands/push.c \
+		commands/rev_rot.c \
+		commands/rotate.c \
+		commands/swap.c \
+		commands/utils.c \ 
 
 
 RM = rm -rf

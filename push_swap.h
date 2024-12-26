@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 13:39:31 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/25 17:59:01 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/26 15:36:13 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 # include <limits.h> 
 
 # define ARG_ERR "Bad Arguments"
+# define INT_ERR "Number isn't integer"
+# define SAME_ERR "There are same numbers in stack"
 
 
 
