@@ -6,16 +6,16 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 17:26:39 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/26 13:01:06 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/28 14:16:46 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static int swap(t_stack **stack)
+static int swap(t_list **stack)
 {
-    t_stack	*head;
-	t_stack	*next;
+    t_list	*head;
+	t_list	*next;
 	int		tmp_val;
 	int		tmp_index;
 
@@ -24,7 +24,7 @@ static int swap(t_stack **stack)
 	head = *stack;
 	next = head->next;
 	if (!head && !next)
-		ft_error("Swap Error!");
+		error("Swap Error!");
 	tmp_val = head->nbr;
 	tmp_index = head->index;
 	head->nbr = next->nbr;
@@ -34,7 +34,7 @@ static int swap(t_stack **stack)
 	return (0);
 }
 
-int	sa(t_stack **stack_a)
+int	sa(t_list **stack_a)
 {
 	if (swap(stack_a) == -1)
 		return (-1);
@@ -43,7 +43,7 @@ int	sa(t_stack **stack_a)
 }
 
 
-int	sb(t_stack **stack_b)
+int	sb(t_list **stack_b)
 {
 	if (swap(stack_b) == -1)
 		return (-1);

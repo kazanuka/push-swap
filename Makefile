@@ -9,7 +9,13 @@ FILES = ps.c \
 		commands/rev_rot.c \
 		commands/rotate.c \
 		commands/swap.c \
-		commands/utils.c \ 
+		etc/arg_checker.c \
+		etc/indexer.c \
+		etc/init_a.c \
+		etc/is_sorted.c \
+		etc/sort.c \
+		etc/utils.c \
+		
 
 
 RM = rm -rf

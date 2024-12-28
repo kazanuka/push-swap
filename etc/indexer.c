@@ -6,16 +6,16 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 17:01:22 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/26 17:52:23 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/28 14:07:10 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-static t_stack	*get_next_min(t_stack *stack)
+static t_list	*get_next_min(t_list *stack)
 {
-	t_stack	*head;
-	t_stack	*min;
+	t_list	*head;
+	t_list	*min;
 	int		has_min;
 
 	min = NULL;
@@ -36,9 +36,9 @@ static t_stack	*get_next_min(t_stack *stack)
 	return (min);
 }
 
-void	indexer(t_stack **stack)
+void	indexer(t_list **stack)
 {
-	t_stack	*head;
+	t_list	*head;
 	int		index;
 
 	index = 0;

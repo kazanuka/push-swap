@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 13:39:31 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/26 19:42:25 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/28 14:15:02 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,36 +25,28 @@
 # define SORTED_ERR "Stack is already sorted."
 
 
-typedef struct s_stack
-{
-	int				index;
-	int				nbr;
-	struct s_stack	*next;
-	struct s_stack	*prev;
-}	t_stack;
-
 void	error(char *error);
-void	liberte(char **slave);
+void	liberte(t_list **slave);
 void	check_args(int argc, char **argv);
-void	init_a(t_stack **stack,int argc, char **argv);
-void	indexer(t_stack **stack);
-void    sort(t_stack **a, t_stack **b);
+void	init_a(t_list **stack,int argc, char **argv);
+void	indexer(t_list **stack);
+void    sort(t_list **a, t_list **b);
 
 
-int		is_sorted(t_stack *stack);
+int		is_sorted(t_list *stack);
 
 
 
 //---------------------------------------------------
-void	pa(t_stack **stack_a, t_stack **stack_b);
-void	pb(t_stack **stack_a, t_stack **stack_b);
+int	pa(t_list **stack_a, t_list **stack_b);
+int	pb(t_list **stack_a, t_list **stack_b);
 //---------------------------------------------------
-int		sa(t_stack **stack_a);
-int		sb(t_stack **stack_b);
+int		sa(t_list **stack_a);
+int		sb(t_list **stack_b);
 int		ss(t_list **stack_a, t_list **stack_b);
 //---------------------------------------------------
-int 	ra(t_stack **a);
-int 	rb(t_stack **b);
+int 	ra(t_list **a);
+int 	rb(t_list **b);
 int		rr(t_list **a, t_list **b);
 //---------------------------------------------------
 int		rra(t_list **a);

@@ -6,11 +6,32 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 15:39:56 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/26 15:59:50 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/28 14:17:57 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
+
+
+static int is_int(long i)
+{
+	if(i >= INT_MIN && i <= INT_MAX)
+		return (1);
+	else
+		return (0);
+}
+
+static int	is_contains(int num, char **argv, int i)
+{
+	i++;
+	while (argv[i])
+	{
+		if (ft_atoi(argv[i]) == num)
+			return (1);
+		i++;
+	}
+	return (0);
+}
 
 void check_args(int argc, char **argv)
 {
@@ -36,22 +57,3 @@ void check_args(int argc, char **argv)
 	}
 }
 
-static int is_int(long i)
-{
-	if(i >= INT_MIN && i <= INT_MAX)
-		return (1);
-	else
-		return (0);
-}
-
-static int	is_contains(int num, char **argv, int i)
-{
-	i++;
-	while (argv[i])
-	{
-		if (ft_atoi(argv[i]) == num)
-			return (1);
-		i++;
-	}
-	return (0);
-}

@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 17:32:50 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/26 16:54:40 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/28 14:06:22 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	rotate(t_list **stack)
 	return (0);
 }
 
-int ra(t_stack **a)
+int ra(t_list **a)
 {
     if (rotate(a) == -1)
 		return (-1);
@@ -36,7 +36,7 @@ int ra(t_stack **a)
 
 }
 
-int rb(t_stack **b)
+int rb(t_list **b)
 {
     if (rotate(b) == -1)
 		return (-1);

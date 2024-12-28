@@ -6,16 +6,16 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 15:42:21 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/26 17:31:14 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/28 14:08:36 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	liberte(char **slave)//free the stack
+void	liberte(t_list **slave)//free the stack
 {
-	t_stack	*head;
-	t_stack	*tmp;
+	t_list	*head;
+	t_list	*tmp;
 
 	head = *slave;
 	while (head)

@@ -6,15 +6,15 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 16:46:09 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/26 17:03:08 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/28 14:07:21 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void init_a(t_stack **stack,int argc, char **argv)
+void init_a(t_list **stack,int argc, char **argv)
 {
-    t_stack *new;
+    t_list *new;
     int i;
 
     i = 1;

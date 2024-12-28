@@ -6,15 +6,15 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 16:01:32 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/26 17:50:45 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/28 14:07:32 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-int is_sorted(t_stack *stack)
+int is_sorted(t_list *stack)
 {
-    t_stack	*head;
+    t_list	*head;
 
 	head = stack;
 	while (head && head->next)

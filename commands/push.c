@@ -6,17 +6,17 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 16:26:39 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/26 13:00:53 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/28 14:14:24 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static int push(t_stack **src, t_stack **dest)
+static int push(t_list **src, t_list **dest)
 {
-    t_stack	*tmp;
-	t_stack	*src_hd;
-	t_stack	*dest_hd;
+    t_list	*tmp;
+	t_list	*src_hd;
+	t_list	*dest_hd;
 
 	if (ft_lstsize(*src) == 0)
 		return (-1);
@@ -39,7 +39,7 @@ static int push(t_stack **src, t_stack **dest)
 	return (0);
 }
 
-void pa(t_stack **stack_a, t_stack **stack_b)
+int pa(t_list **stack_a, t_list **stack_b)
 {
     if (push(stack_b, stack_a) == -1)
 		return (-1);
@@ -49,7 +49,7 @@ void pa(t_stack **stack_a, t_stack **stack_b)
     
 }
 
-void pb(t_stack **stack_a, t_stack **stack_b)
+int pb(t_list **stack_a, t_list **stack_b)
 {
     if (push(stack_a, stack_b) == -1)
 		return (-1);
