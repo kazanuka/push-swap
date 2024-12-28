@@ -11,7 +11,7 @@ int main(int argc, char **argv)
     b = NULL;
     check_args(argc,argv);
     init_a(a,argc,argv);
-    if(is_sorted(a))
+    if(is_sorted(a))//SORTED ERRORA BAK
     {
         liberte(a);
         liberte(b);
