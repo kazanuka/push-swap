@@ -6,22 +6,15 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 15:39:56 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/28 14:17:57 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/28 16:00:51 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
 
-static int is_int(long i)
-{
-	if(i >= INT_MIN && i <= INT_MAX)
-		return (1);
-	else
-		return (0);
-}
 
-static int	is_contains(int num, char **argv, int i)
+static int	ft_contains(int num, char **argv, int i)
 {
 	i++;
 	while (argv[i])
@@ -33,27 +26,61 @@ static int	is_contains(int num, char **argv, int i)
 	return (0);
 }
 
-void check_args(int argc, char **argv)
+static int	ft_isnum(char *num)
 {
-	int i;
-	int tmp;
+	int	i;
 
 	i = 0;
-	if(argc == 1 || (argc == 2 && !argv[1][0]))
-		error(ARG_ERR);
-	else if(argc == 2)
-		argv = ft_split(argv[1],' ');
-	else 
-		i = 1;
-	while(argv[i])
+	if (num[0] == '-')
+		i++;
+	while (num[i])
 	{
-		if(!is_int(argv[i]))
-			error(INT_ERR);
-		argv[i] = ft_atoi(argv[i]);
-		tmp = argv[i];
-		if(is_contains(tmp,argv,i))
-			error(SAME_ERR);
+		if (!ft_isdigit(num[i]))
+			return (0);
 		i++;
 	}
+	return (1);
+}
+static void	free_ints(char **ints)
+{
+	int i;
+
+	i = 0;
+	while (ints[i])
+	{
+		free(ints[i]);
+		i++;
+	}
+	free(ints);
+}
+
+
+void	check_args(int argc, char **argv)
+{
+	int		i;
+	long	tmp;
+	char	**args;	
+
+	i = 0;
+	if (argc == 2)
+		args = ft_split(argv[1], ' ');
+	else
+	{
+		i = 1;
+		args = argv;
+	}
+	while (args[i])
+	{
+		tmp = ft_atoi(args[i]);
+		if (!ft_isnum(args[i]))
+			error("Error");
+		if (ft_contains(tmp, args, i))
+			error("Error");
+		if (tmp < -2147483648 || tmp > 2147483647)
+			error("Error");
+		i++;
+	}
+	if (argc == 2)
+		free_ints(args);
 }
 

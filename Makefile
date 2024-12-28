@@ -2,7 +2,7 @@ NAME = push_swap.a
 
 CC = cc
 
-CFLAGS = -Wall -Wextra -Werror
+#CFLAGS = -Wall -Wextra -Werror
 
 FILES = ps.c \
 		commands/push.c \
@@ -25,7 +25,7 @@ OBJ = $(FILES:.c=.o)
 
 $(NAME):
 	make -C libft/
-	gcc -Wall -Wextra -Werror -c $(FILES)
+	gcc -c $(FILES)
 	ar -r -c $(NAME) $(OBJ)
 
 all: $(NAME)
