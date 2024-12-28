@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 13:39:31 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/28 14:15:02 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/28 16:11:53 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,9 @@ void    sort(t_list **a, t_list **b);
 
 
 int		is_sorted(t_list *stack);
-
-
+void	free_ints(char **ints);
+void	complex_sort(t_list **a, t_list **b);
+void	simple_sort(t_list **a, t_list **b);
 
 //---------------------------------------------------
 int	pa(t_list **stack_a, t_list **stack_b);

@@ -6,23 +6,57 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 16:46:09 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/28 14:07:21 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/28 16:08:35 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void init_a(t_list **stack,int argc, char **argv)
+void	init_a(t_list **stack, int argc, char **argv)
 {
-    t_list *new;
-    int i;
+	t_list	*new;
+	char	**args;
+	int		i;
 
-    i = 1;
-    while (argv[i])
+	i = 0;
+	if (argc == 2)
+		args = ft_split(argv[1], ' ');
+	else
 	{
-		new = ft_lstnew(argv[i]);
+		i = 1;
+		args = argv;
+	}
+	while (args[i])
+	{
+		new = ft_lstnew(ft_atoi(args[i]));
 		ft_lstadd_front(stack, new);
 		i++;
 	}
 	indexer(stack);
+	if (argc == 2)
+		free_ints(args);
+}
+
+static t_list	*get_next_min(t_list **stack)
+{
+	t_list	*head;
+	t_list	*min;
+	int		has_min;
+
+	min = NULL;
+	has_min = 0;
+	head = *stack;
+	if (head)
+	{
+		while (head)
+		{
+			if ((head->index == -1) && (!has_min || head->nbr < min->nbr))
+			{
+				min = head;
+				has_min = 1;
+			}
+			head = head->next;
+		}
+	}
+	return (min);
 }
