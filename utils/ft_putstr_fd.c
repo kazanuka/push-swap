@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_a.c                                           :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 16:46:09 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/28 16:18:24 by fkuyumcu         ###   ########.fr       */
+/*   Created: 2024/10/07 12:01:04 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/12/29 12:46:31 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
 
-void	init_a(t_list **stack, int argc, char **argv)
+void	ft_putstr_fd(char *s, int fd)
 {
-	t_list	*new;
-	char	**args;
-	int		i;
-
-	i = 0;
-	if (argc == 2)
-		args = ft_split(argv[1], ' ');
-	else
+	if (!s)
+		return ;
+	while (*s)
 	{
-		i = 1;
-		args = argv;
+		write(fd, s, 1);
+		++s;
 	}
-	while (args[i])
-	{
-		new = ft_lstnew(ft_atoi(args[i]));
-		ft_lstadd_front(stack, new);
-		i++;
-	}
-	indexer(stack);
-	if (argc == 2)
-		free_ints(args);
 }
-

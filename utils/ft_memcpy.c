@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_a.c                                           :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 16:46:09 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/28 16:18:24 by fkuyumcu         ###   ########.fr       */
+/*   Created: 2024/10/07 12:00:48 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/12/29 12:46:24 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-
-void	init_a(t_list **stack, int argc, char **argv)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	t_list	*new;
-	char	**args;
-	int		i;
+	unsigned char	*p;
+	unsigned char	*q;
 
-	i = 0;
-	if (argc == 2)
-		args = ft_split(argv[1], ' ');
-	else
+	if (!dest && !src)
+		return (NULL);
+	p = (unsigned char *) src;
+	q = (unsigned char *) dest;
+	while (n--)
 	{
-		i = 1;
-		args = argv;
+		q[n] = p[n];
 	}
-	while (args[i])
-	{
-		new = ft_lstnew(ft_atoi(args[i]));
-		ft_lstadd_front(stack, new);
-		i++;
-	}
-	indexer(stack);
-	if (argc == 2)
-		free_ints(args);
+	return (dest);
 }
-

@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 17:14:44 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/28 16:09:36 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/28 16:18:45 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ void complex_sort(t_list **a, t_list **b)
 	int bit;
 	int j;
 	int size;
-	int max_bits;
 
 	bit = 0;
 	tmp_a = *a;

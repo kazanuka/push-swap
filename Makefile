@@ -1,45 +1,46 @@
-NAME = push_swap.a
+NAME = push_swap
+SRCS = ps.c \
+ 	commands/push.c \
+ 	commands/rev_rot.c \
+ 	commands/rotate.c \
+	commands/swap.c \
+	etc/arg_checker.c \
+	etc/indexer.c \
+	etc/init_a.c \
+	etc/is_sorted.c \
+	etc/sort.c \
+	etc/utils.c \
+	utils/ft_atoi.c \
+	utils/ft_isdigit.c \
+	utils/ft_lstadd_back_bonus.c \
+	utils/ft_lstadd_front_bonus.c \
+	utils/ft_lstclear_bonus.c \
+	utils/ft_lstdelone_bonus.c \
+	utils/ft_lstiter_bonus.c \
+	utils/ft_lstlast_bonus.c \
+	utils/ft_lstnew_bonus.c \
+	utils/ft_lstsize_bonus.c \
+	utils/ft_putendl_fd.c \
+	utils/ft_putstr_fd.c \
+	utils/ft_split.c \
 
-CC = cc
+	 
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
 
-#CFLAGS = -Wall -Wextra -Werror
+OBJS = $(SRCS:.c=.o)
+RM = rm -f
 
-FILES = ps.c \
-		commands/push.c \
-		commands/rev_rot.c \
-		commands/rotate.c \
-		commands/swap.c \
-		etc/arg_checker.c \
-		etc/indexer.c \
-		etc/init_a.c \
-		etc/is_sorted.c \
-		etc/sort.c \
-		etc/utils.c \
-		
+all: ${NAME} ${CHECK}
+${NAME}: ${OBJS}
+	@${CC} ${CFLAGS} ${OBJS} -o ${NAME}
 
-
-RM = rm -rf
-
-
-OBJ = $(FILES:.c=.o)
-
-$(NAME):
-	make -C libft/
-	gcc -c $(FILES)
-	ar -r -c $(NAME) $(OBJ)
-
-all: $(NAME)
-
-clean:
-	make clean -C libft/
-	rm -f $(OBJ)
+clean: 
+	@${RM} ${OBJS}
 
 fclean: clean
-	make fclean -C libft/
-	rm -f $(NAME)
+	@${RM} ${NAME}
 
 re: fclean all
 
-.PHONY : all, clean, fclean, re
-
-
+.PHONY: all clean fclean re

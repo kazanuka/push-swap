@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_a.c                                           :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 16:46:09 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/28 16:18:24 by fkuyumcu         ###   ########.fr       */
+/*   Created: 2024/10/07 12:01:54 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/12/29 12:46:47 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-
-void	init_a(t_list **stack, int argc, char **argv)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	t_list	*new;
-	char	**args;
-	int		i;
+	unsigned int	size;
+	const char		*firstc;
+	char			*address;
 
-	i = 0;
-	if (argc == 2)
-		args = ft_split(argv[1], ' ');
-	else
-	{
-		i = 1;
-		args = argv;
-	}
-	while (args[i])
-	{
-		new = ft_lstnew(ft_atoi(args[i]));
-		ft_lstadd_front(stack, new);
-		i++;
-	}
-	indexer(stack);
-	if (argc == 2)
-		free_ints(args);
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	size = ft_strlen(s + start);
+	if (size < len)
+		len = size;
+	firstc = &s[start];
+	address = (char *)malloc(len + 1);
+	if (address == NULL)
+		return (NULL);
+	ft_memcpy(address, firstc, len);
+	address[len] = '\0';
+	return (address);
 }
-
