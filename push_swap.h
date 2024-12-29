@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 13:39:31 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/29 12:45:39 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/29 14:10:50 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <stdbool.h>
 # include <limits.h> 
+# include <stdio.h>
 
 # define ARG_ERR "Bad Arguments"
 # define INT_ERR "Number isn't integer"

@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 17:01:22 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/28 16:04:07 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/29 14:57:54 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void	indexer(t_list **stack)
 	head = get_next_min(stack);
 	while (head)
 	{
+		//printf("%d",head->index);
 		head->index = index++;
 		head = get_next_min(stack);
 	}

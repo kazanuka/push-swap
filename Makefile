@@ -14,15 +14,17 @@ SRCS = ps.c \
 	utils/ft_isdigit.c \
 	utils/ft_lstadd_back_bonus.c \
 	utils/ft_lstadd_front_bonus.c \
-	utils/ft_lstclear_bonus.c \
-	utils/ft_lstdelone_bonus.c \
-	utils/ft_lstiter_bonus.c \
 	utils/ft_lstlast_bonus.c \
 	utils/ft_lstnew_bonus.c \
 	utils/ft_lstsize_bonus.c \
 	utils/ft_putendl_fd.c \
 	utils/ft_putstr_fd.c \
 	utils/ft_split.c \
+	utils/ft_strdup.c \
+	utils/ft_strlen.c \
+	utils/ft_substr.c \
+	utils/ft_memcpy.c \
+
 
 	 
 CC = gcc
@@ -31,7 +33,7 @@ CFLAGS = -Wall -Wextra -Werror
 OBJS = $(SRCS:.c=.o)
 RM = rm -f
 
-all: ${NAME} ${CHECK}
+all: ${NAME} 
 ${NAME}: ${OBJS}
 	@${CC} ${CFLAGS} ${OBJS} -o ${NAME}
 
