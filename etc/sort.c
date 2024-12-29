@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 17:14:44 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/29 15:47:37 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/29 17:15:30 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ void	sort(t_list **a, t_list **b)
     if (ft_lstsize(*a) <= 5)
 		simple_sort(a, b);
 	else
-	{
 		complex_sort(a,b);
-	}
 		
 }
 
@@ -62,13 +60,9 @@ void complex_sort(t_list **a, t_list **b)
         {
             tmp_a = *a;
             if (((tmp_a->index >> bit) & 1) == 1)
-            {
                 ra(a);
-            }
             else
-            {
                 pb(a, b);
-            }
             j++;
         }
         while (ft_lstsize(*b) != 0)

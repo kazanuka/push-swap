@@ -11,15 +11,13 @@ int main(int argc, char **argv)
     
     check_args(argc,argv);
     init_a(a,argc,argv);
+    printf("%d",is_sorted(*a));
     if(is_sorted(*a))//SORTED ERRORA BAK
     {
         liberte(a);
         liberte(b);
         error(SORTED_ERR);
     }
-    printf("%d\n",(*a)->nbr);
-    printf("%d\n",(*a)->next->nbr);
-    printf("%d\n",(*a)->next->next->nbr);
     sort(a,b);
     liberte(a);
     liberte(b); 
