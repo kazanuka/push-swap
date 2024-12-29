@@ -6,13 +6,13 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 17:01:22 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/29 15:51:08 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/29 17:29:10 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static t_list	*get_next_min(t_list **stack)
+static t_list	*next_min(t_list **stack)
 {
 	t_list	*head;
 	t_list	*min;
@@ -38,13 +38,12 @@ void	indexer(t_list **stack)
 {
 	t_list	*head;
 	int		index;
-	index = 0;
 	
-	head = get_next_min(stack);
-	//printf("%p",head);
+	index = 0;
+	head = next_min(stack);
 	while (head)
 	{
 		head->index = index++;
-		head = get_next_min(stack);
+		head = next_min(stack);
 	}
 }
