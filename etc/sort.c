@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 17:14:44 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/29 14:53:12 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/29 15:47:37 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 #include <stdio.h>
 void simple_sort(t_list **a, t_list **b)
 {
-	printf("%p%p",a,b);
-	return ;
+	complex_sort(a,b);
 }
 
 void	sort(t_list **a, t_list **b)
@@ -58,7 +57,7 @@ void complex_sort(t_list **a, t_list **b)
     while (bit < get_max_bits(a))
     {
         j = 0;
-        size = ft_lstsize(*a); // Her bit döngüsünde liste boyutunu güncelle
+        size = ft_lstsize(*a);
         while (j < size)
         {
             tmp_a = *a;
