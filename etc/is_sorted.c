@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 16:01:32 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/29 16:21:44 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/30 14:15:34 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 int is_sorted(t_list *stack)
 {
-    t_list	*head;
-
-	head = stack;
-	while (head && head->next)
+	while (stack && stack->next)
 	{
-		if (head->nbr > head->next->nbr)
+		if (stack->nbr > stack->next->nbr)
 			return (0);
-		head = head->next;
+		stack = stack->next;
 	}
 	return (1);
 }
