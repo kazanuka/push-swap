@@ -10,6 +10,7 @@ SRCS = ps.c \
 	etc/is_sorted.c \
 	etc/sort.c \
 	etc/utils.c \
+	etc/mini_sort.c \
 	utils/ft_atoi.c \
 	utils/ft_isdigit.c \
 	utils/ft_lstadd_back_bonus.c \

@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 17:14:44 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/29 17:24:36 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/30 13:40:52 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	sort(t_list **a, t_list **b)
 		complex_sort(a,b);		
 }
 
-static int	get_max_bits(t_list **stack)
+int	get_max_bits(t_list **stack)
 {
 	t_list	*head;
 	int		max;
@@ -40,7 +40,7 @@ static int	get_max_bits(t_list **stack)
 	return (max_bits);
 }
 
-static void complex_sort(t_list **a, t_list **b)
+void complex_sort(t_list **a, t_list **b)
 {
     t_list *tmp_a;
     int bit;
