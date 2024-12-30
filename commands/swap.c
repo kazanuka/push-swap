@@ -6,15 +6,15 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 17:26:39 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/28 14:16:46 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/30 14:48:07 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static int swap(t_list **stack)
+static	int	swap(t_list **stack)
 {
-    t_list	*head;
+	t_list	*head;
 	t_list	*next;
 	int		tmp_val;
 	int		tmp_index;
@@ -41,7 +41,6 @@ int	sa(t_list **stack_a)
 	ft_putendl_fd("sa", 1);
 	return (0);
 }
-
 
 int	sb(t_list **stack_b)
 {

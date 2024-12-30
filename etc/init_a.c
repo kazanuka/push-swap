@@ -6,12 +6,11 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 16:46:09 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/29 17:34:22 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/30 15:13:30 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
 
 void	init_a(t_list **stack, int argc, char **argv)
 {
@@ -30,11 +29,10 @@ void	init_a(t_list **stack, int argc, char **argv)
 	while (args[i])
 	{
 		new = ft_lstnew(ft_atoi(args[i]));
-		ft_lstadd_front(stack, new);
+		ft_lstadd_back(stack, new);
 		i++;
 	}
 	indexer(stack);
 	if (argc == 2)
 		free_ints(args);
 }
-

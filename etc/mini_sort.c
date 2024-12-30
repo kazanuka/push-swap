@@ -6,13 +6,13 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/29 17:23:15 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/30 14:21:10 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/30 14:54:23 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void	sort_3(t_list **stack_a)
+static	void	sort_3(t_list **stack_a)
 {
 	t_list	*node;
 
@@ -74,17 +74,16 @@ void	position(t_list **stack_a, t_list **stack_b)
 	pb(stack_a, stack_b);
 }
 
-void simple_sort(t_list **a, t_list **b)
+void	simple_sort(t_list **a, t_list **b)
 {
-	if(is_sorted(*a) || (ft_lstsize(*a) < 2))
+	if (is_sorted(*a) || (ft_lstsize(*a) < 2))
 		return ;
-    if(ft_lstsize(*a) == 2)
-        ra(a);
-    else if(ft_lstsize(*a) == 3)
-        sort_3(a);
-    else if(ft_lstsize(*a) == 4)
-        sort_4(a,b);
-    else if(ft_lstsize(*a) == 5)
-        sort_5(a,b);
+	if (ft_lstsize(*a) == 2)
+		ra(a);
+	else if (ft_lstsize(*a) == 3)
+		sort_3(a);
+	else if (ft_lstsize(*a) == 4)
+		sort_4(a, b);
+	else if (ft_lstsize(*a) == 5)
+		sort_5(a, b);
 }
-

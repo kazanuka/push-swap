@@ -6,13 +6,13 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 15:42:21 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/30 14:07:43 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/30 14:59:53 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	liberte(t_list **slave)//free the stack
+void	liberte(t_list **slave)
 {
 	t_list	*head;
 	t_list	*tmp;
@@ -27,9 +27,8 @@ void	liberte(t_list **slave)//free the stack
 	free(slave);
 }
 
-void error(char *error)
+void	error(char *error)
 {
-	ft_putstr_fd(error,1);
+	ft_putstr_fd(error, 1);
 	exit(EXIT_FAILURE);
 }
-

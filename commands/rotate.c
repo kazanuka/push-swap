@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 17:32:50 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/28 14:06:22 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/30 14:47:22 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,17 @@ static int	rotate(t_list **stack)
 	return (0);
 }
 
-int ra(t_list **a)
+int	ra(t_list **a)
 {
-    if (rotate(a) == -1)
+	if (rotate(a) == -1)
 		return (-1);
 	ft_putendl_fd("ra", 1);
 	return (0);
-
 }
 
-int rb(t_list **b)
+int	rb(t_list **b)
 {
-    if (rotate(b) == -1)
+	if (rotate(b) == -1)
 		return (-1);
 	ft_putendl_fd("rb", 1);
 	return (0);
@@ -53,5 +52,3 @@ int	rr(t_list **a, t_list **b)
 	ft_putendl_fd("rr", 1);
 	return (0);
 }
-
-

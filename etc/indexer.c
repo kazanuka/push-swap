@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 17:01:22 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/29 17:29:10 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/30 14:50:36 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ static t_list	*next_min(t_list **stack)
 	{
 		while (head)
 		{
-			if (head->index == 0 && (min == NULL || head->nbr < min->nbr))//bunu sıfır yaptım
-			{//ÖNEMLİ
+			if (head->index == 0 && (min == NULL || head->nbr < min->nbr))
+			{
 				min = head;
 			}
 			head = head->next;
@@ -33,12 +33,11 @@ static t_list	*next_min(t_list **stack)
 	return (min);
 }
 
-
 void	indexer(t_list **stack)
 {
 	t_list	*head;
 	int		index;
-	
+
 	index = 0;
 	head = next_min(stack);
 	while (head)

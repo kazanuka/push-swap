@@ -6,13 +6,13 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 17:39:02 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/26 13:00:58 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/30 14:46:15 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static int	rev_rot(t_list **stack)
+static	int	rev_rot(t_list **stack)
 {
 	t_list	*head;
 	t_list	*tail;
@@ -25,8 +25,8 @@ static int	rev_rot(t_list **stack)
 	{
 		if (head->next->next == NULL)
 		{
-			 head->next = NULL;
-			 break ;
+			head->next = NULL;
+			break ;
 		}
 		head = head->next;
 	}

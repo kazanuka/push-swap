@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 13:39:31 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/30 13:43:05 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/30 15:07:27 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,13 @@ typedef struct s_list
 	struct s_list	*prev;
 }					t_list;
 
-
-
 void	error(char *error);
 void	liberte(t_list **slave);
 void	check_args(int argc, char **argv);
-void	init_a(t_list **stack,int argc, char **argv);
+void	init_a(t_list **stack, int argc, char **argv);
 void	indexer(t_list **stack);
-void    sort(t_list **a, t_list **b);
+void	sort(t_list **a, t_list **b);
 int		get_max_bits(t_list **stack);
-
 
 int		is_sorted(t_list *stack);
 void	free_ints(char **ints);
@@ -49,7 +46,6 @@ void	complex_sort(t_list **a, t_list **b);
 void	simple_sort(t_list **a, t_list **b);
 void	position(t_list **stack_a, t_list **stack_b);
 t_list	*min_node(t_list **stack);
-
 
 long	ft_atoi(const char *str);
 int		ft_isdigit(int c);
@@ -66,26 +62,10 @@ size_t	ft_strlen(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 t_list	*ft_lstnew(int content);
 
-
-
-//---------------------------------------------------
-int	pa(t_list **stack_a, t_list **stack_b);
-int	pb(t_list **stack_a, t_list **stack_b);
-//---------------------------------------------------
+int		pa(t_list **stack_a, t_list **stack_b);
+int		pb(t_list **stack_a, t_list **stack_b);
 int		sa(t_list **stack_a);
-int		sb(t_list **stack_b);
-int		ss(t_list **stack_a, t_list **stack_b);
-//---------------------------------------------------
-int 	ra(t_list **a);
-int 	rb(t_list **b);
-int		rr(t_list **a, t_list **b);
-//---------------------------------------------------
+int		ra(t_list **a);
 int		rra(t_list **a);
-int		rrb(t_list **b);
-int		rrr(t_list **a, t_list **b);
-//---------------------------------------------------
-
-
-
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 17:14:44 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/30 13:40:52 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/30 14:58:11 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	sort(t_list **a, t_list **b)
 {
-    if (ft_lstsize(*a) <= 5)
+	if (ft_lstsize(*a) <= 5)
 		simple_sort(a, b);
 	else
-		complex_sort(a,b);		
+		complex_sort(a, b);
 }
 
 int	get_max_bits(t_list **stack)
@@ -40,31 +40,31 @@ int	get_max_bits(t_list **stack)
 	return (max_bits);
 }
 
-void complex_sort(t_list **a, t_list **b)
+void	complex_sort(t_list **a, t_list **b)
 {
-    t_list *tmp_a;
-    int bit;
-    int j;
-    int size;
-    bit = 0;
-    while (bit < get_max_bits(a))
-    {
-        j = 0;
-        size = ft_lstsize(*a);
-        while (j < size)
-        {
-            tmp_a = *a;
-            if (((tmp_a->index >> bit) & 1) == 1)
-                ra(a);
-            else
-                pb(a, b);
-            j++;
-        }
-        while (ft_lstsize(*b) != 0)
-        {
-            pa(a, b);
-        }
-        bit++;
-    }
-}
+	t_list	*tmp_a;
+	int		bit;
+	int		j;
+	int		size;
 
+	bit = 0;
+	while (bit < get_max_bits(a))
+	{
+		j = 0;
+		size = ft_lstsize(*a);
+		while (j < size)
+		{
+			tmp_a = *a;
+			if (((tmp_a->index >> bit) & 1) == 1)
+				ra(a);
+			else
+				pb(a, b);
+			j++;
+		}
+		while (ft_lstsize(*b) != 0)
+		{
+			pa(a, b);
+		}
+		bit++;
+	}
+}
