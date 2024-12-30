@@ -11,24 +11,14 @@ SRCS = ps.c \
 	etc/sort.c \
 	etc/utils.c \
 	etc/mini_sort.c \
-	utils/ft_atoi.c \
-	utils/ft_isdigit.c \
-	utils/ft_lstadd_back_bonus.c \
-	utils/ft_lstadd_front_bonus.c \
-	utils/ft_lstlast_bonus.c \
-	utils/ft_lstnew_bonus.c \
-	utils/ft_lstsize_bonus.c \
-	utils/ft_putendl_fd.c \
-	utils/ft_putstr_fd.c \
-	utils/ft_split.c \
-	utils/ft_strdup.c \
-	utils/ft_strlen.c \
-	utils/ft_substr.c \
-	utils/ft_memcpy.c \
+	utils/lst_utils.c \
+	utils/str_utils.c \
+	utils/str_utils_2.c \
 
 
 	 
 CC = gcc
+
 CFLAGS = -Wall -Wextra -Werror
 
 OBJS = $(SRCS:.c=.o)

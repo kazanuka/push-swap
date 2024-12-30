@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/29 17:23:15 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/30 13:47:40 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/30 14:21:10 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,25 +74,6 @@ void	position(t_list **stack_a, t_list **stack_b)
 	pb(stack_a, stack_b);
 }
 
-t_list	*min_node(t_list **stack)
-{
-	t_list	*tmp;
-	t_list	*min;
-
-	if (!stack || !*stack)
-		return (NULL);
-	min = *stack;
-	tmp = min->next;
-	while (tmp != NULL)
-	{
-		if (tmp->index < min->index)
-			min = tmp;
-		tmp = tmp->next;
-	}
-	return (min);
-}
-
-
 void simple_sort(t_list **a, t_list **b)
 {
 	if(is_sorted(*a) || (ft_lstsize(*a) < 2))
@@ -101,7 +82,7 @@ void simple_sort(t_list **a, t_list **b)
         ra(a);
     else if(ft_lstsize(*a) == 3)
         sort_3(a);
-    else if (ft_lstsize(*a) == 4)
+    else if(ft_lstsize(*a) == 4)
         sort_4(a,b);
     else if(ft_lstsize(*a) == 5)
         sort_5(a,b);
