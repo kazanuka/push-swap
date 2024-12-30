@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 15:39:56 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/30 15:38:14 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/30 17:53:12 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	check_args(int argc, char **argv)
 	{
 		args = ft_split(argv[1], ' ');
 		if (args == NULL)
-			error("Memory Error\n");
+			error("Error\n");
 	}
 	else
 		args = argv;
@@ -73,7 +73,7 @@ void	check_args(int argc, char **argv)
 		tmp = ft_atoi(args[i]);
 		if (!ft_isnum(args[i]) || ft_contains(tmp, args, i)
 			|| (tmp < -2147483648 || tmp > 2147483647))
-			error("Unexpected Value");
+			error("Error\n");
 		i++;
 	}
 	if (argc == 2)

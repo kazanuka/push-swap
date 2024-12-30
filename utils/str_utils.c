@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 14:21:28 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/30 14:23:56 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/30 17:52:46 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,27 @@
 
 long	ft_atoi(const char *str)
 {
-	int	i;
-	int	sign;
-	int	res;
+	int		sign;
+	long	result;
+	int		i;
 
-	res = 0;
-	i = 0;
 	sign = 1;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+	result = 0;
+	i = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
-	if (str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		sign = -1;
+		if (str[i] == '-')
+			sign = sign * (-1);
 		i++;
 	}
-	else if (str[i] == '+')
-		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = res * 10 + (str[i] - '0');
+		result = result * 10 + (str[i] - '0');
 		i++;
 	}
-	return (sign * res);
+	return (sign * result);
 }
 
 void	ft_putendl_fd(char	*s, int fd)

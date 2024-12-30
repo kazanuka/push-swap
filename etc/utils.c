@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 15:42:21 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/30 14:59:53 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/30 17:38:08 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ void	liberte(t_list **slave)
 
 void	error(char *error)
 {
-	ft_putstr_fd(error, 1);
+	ft_putstr_fd(error, 2);
 	exit(EXIT_FAILURE);
 }
