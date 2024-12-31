@@ -5,6 +5,7 @@ SRCS = ps.c \
  	commands/rotate.c \
 	commands/swap.c \
 	etc/arg_checker.c \
+	etc/arg_checker_2.c \
 	etc/indexer.c \
 	etc/init_a.c \
 	etc/is_sorted.c \

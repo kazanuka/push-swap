@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 13:39:31 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/31 16:08:28 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/31 20:39:11 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,10 @@ void	complex_sort(t_list **a, t_list **b);
 void	simple_sort(t_list **a, t_list **b);
 void	position(t_list **stack_a, t_list **stack_b);
 t_list	*min_node(t_list **stack);
+int	ft_isnum(char *num);
+int	ft_contains(int num, char **argv, int i);
+
+
 
 long	ft_atoi(const char *str);
 int		ft_isdigit(int c);
