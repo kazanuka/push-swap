@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 13:39:31 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/31 11:57:53 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/31 12:16:54 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ void	complex_sort(t_list **a, t_list **b);
 void	simple_sort(t_list **a, t_list **b);
 void	position(t_list **stack_a, t_list **stack_b);
 t_list	*min_node(t_list **stack);
-
 
 int		atoi_check(char *string);
 int		ft_atoi(const char *str);
