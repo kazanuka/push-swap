@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 15:39:56 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/30 17:53:12 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/31 20:33:32 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	check_args(int argc, char **argv)
 	long	tmp;
 	char	**args;	
 
-	i = 1;
+	i = 0;
 	if (argc == 2)
 	{
 		args = ft_split(argv[1], ' ');
@@ -67,7 +67,10 @@ void	check_args(int argc, char **argv)
 			error("Error\n");
 	}
 	else
-		args = argv;
+	{
+		i = 1;
+		args = argv;	
+	}
 	while (args[i])
 	{
 		tmp = ft_atoi(args[i]);
