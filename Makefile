@@ -15,11 +15,13 @@ SRCS = ps.c \
 	utils/lst_utils.c \
 	utils/str_utils.c \
 	utils/str_utils_2.c \
+	utils/split.c \
+
 
 	 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS =
 
 OBJS = $(SRCS:.c=.o)
 RM = rm -f

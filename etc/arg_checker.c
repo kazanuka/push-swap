@@ -6,13 +6,13 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 15:39:56 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/31 20:51:54 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/31 23:06:12 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static char	**prepare_args(int argc, char **argv)
+static char	**prepare_args(int argc, char **argv, t_list **a, t_list **b)
 {
 	char	**args;
 
@@ -21,10 +21,11 @@ static char	**prepare_args(int argc, char **argv)
 		args = ft_split(argv[1], ' ');
 		if (args == NULL)
 		{
+			liberte(a);
+			liberte(b);
 			free_ints(args);
 			error("Error\n");
 		}
-			
 	}
 	else
 	{
@@ -33,7 +34,7 @@ static char	**prepare_args(int argc, char **argv)
 	return (args);
 }
 
-static void	validate_args(char **args, int argc)
+static void	validate_args(char **args, int argc, t_list **a, t_list **b)
 {
 	int		i;
 	long	tmp;
@@ -48,20 +49,22 @@ static void	validate_args(char **args, int argc)
 		if (!ft_isnum(args[i]) || ft_contains(tmp, args, i)
 			|| (tmp < -2147483648 || tmp > 2147483647))
 			{
+				liberte(a);
+				liberte(b);
+				if (argc == 2)
+					free_ints(args);
 				error("Error\n");
-				free_ints(args);
 			}
-			
 		i++;
 	}
 	if (argc == 2)
-		free_split(args);
+		free_ints(args);
 }
 
-void	check_args(int argc, char **argv)
+void	check_args(int argc, char **argv, t_list **a, t_list **b)
 {
 	char	**args;
 
-	args = prepare_args(argc, argv);
-	validate_args(args, argc);
+	args = prepare_args(argc, argv, a, b);
+	validate_args(args, argc, a, b);
 }

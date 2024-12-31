@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 14:21:28 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/31 16:08:14 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/31 21:39:46 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,54 +58,4 @@ void	ft_putstr_fd(char *s, int fd)
 		write(fd, s, 1);
 		++s;
 	}
-}
-
-static int	count_tokens(char const *s, char c)
-{
-	char	*q;
-	int		count;
-
-	q = (char *)s;
-	count = 0;
-	while (*q)
-	{
-		if (*q == c)
-			q++;
-		else
-		{
-			count++;
-			while (*q && *q != c)
-				q++;
-		}
-	}
-	return (count);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	char		**str_arr;
-	int			i;
-	int			j;
-	int			count;
-
-	if (!s)
-		return (0);
-	count = count_tokens(s, c);
-	str_arr = malloc(sizeof(char *) * (count + 1));
-	if (!str_arr)
-		return (0);
-	i = -1;
-	j = 0;
-	while (++i < count)
-	{
-		while (*s == c)
-			s++;
-		j = 0;
-		while (*(s + j) != c && *(s + j))
-			j++;
-		*(str_arr + i) = ft_substr(s, 0, j);
-		s += j;
-	}
-	*(str_arr + i) = 0;
-	return (str_arr);
 }

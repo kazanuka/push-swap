@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 13:39:31 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/31 20:39:11 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/31 22:34:39 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ typedef struct s_list
 
 void	error(char *error);
 void	liberte(t_list **slave);
-void	check_args(int argc, char **argv);
+void	check_args(int argc, char **argv, t_list **a, t_list **b);
 void	init_a(t_list **stack, int argc, char **argv);
 void	indexer(t_list **stack);
 void	sort(t_list **a, t_list **b);
@@ -46,10 +46,8 @@ void	complex_sort(t_list **a, t_list **b);
 void	simple_sort(t_list **a, t_list **b);
 void	position(t_list **stack_a, t_list **stack_b);
 t_list	*min_node(t_list **stack);
-int	ft_isnum(char *num);
-int	ft_contains(int num, char **argv, int i);
-
-
+int		ft_isnum(char *num);
+int		ft_contains(int num, char **argv, int i);
 
 long	ft_atoi(const char *str);
 int		ft_isdigit(int c);
@@ -60,10 +58,9 @@ int		ft_lstsize(t_list *lst);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	ft_putendl_fd(char	*s, int fd);
 void	ft_putstr_fd(char *s, int fd);
-char	**ft_split(char const *s, char c);
+char	**ft_split(const char *s, char c);
 char	*ft_strdup(const char *s1);
 size_t	ft_strlen(const char *s);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
 t_list	*ft_lstnew(int content);
 
 int		pa(t_list **stack_a, t_list **stack_b);
