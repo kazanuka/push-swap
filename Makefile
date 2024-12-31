@@ -14,7 +14,6 @@ SRCS = ps.c \
 	utils/lst_utils.c \
 	utils/str_utils.c \
 	utils/str_utils_2.c \
-	utils/atoi_utils.c \
 
 	 
 CC = gcc
