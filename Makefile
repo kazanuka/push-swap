@@ -9,12 +9,12 @@ SRCS = ps.c \
 	etc/init_a.c \
 	etc/is_sorted.c \
 	etc/sort.c \
-	etc/utils.c \
+	etc/unexpected.c \
 	etc/mini_sort.c \
 	utils/lst_utils.c \
 	utils/str_utils.c \
 	utils/str_utils_2.c \
-
+	utils/atoi_utils.c \
 
 	 
 CC = gcc

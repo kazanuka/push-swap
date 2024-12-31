@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 16:46:09 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/30 15:13:30 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/31 12:00:32 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ void	init_a(t_list **stack, int argc, char **argv)
 	}
 	while (args[i])
 	{
+		if(atoi_check(args[i]) == 0)
+			error("Error\n");
 		new = ft_lstnew(ft_atoi(args[i]));
 		ft_lstadd_back(stack, new);
 		i++;
