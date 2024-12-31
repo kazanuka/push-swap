@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 14:24:27 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/31 21:44:33 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/31 23:10:34 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@ size_t	ft_strlen(const char *s)
 	}
 	return (i);
 }
-
-
 
 int	ft_isdigit(int c)
 {

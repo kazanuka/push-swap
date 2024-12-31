@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 15:39:56 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/31 23:06:12 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/31 23:11:14 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,13 @@ static void	validate_args(char **args, int argc, t_list **a, t_list **b)
 		tmp = ft_atoi(args[i]);
 		if (!ft_isnum(args[i]) || ft_contains(tmp, args, i)
 			|| (tmp < -2147483648 || tmp > 2147483647))
-			{
-				liberte(a);
-				liberte(b);
-				if (argc == 2)
-					free_ints(args);
-				error("Error\n");
-			}
+		{
+			liberte(a);
+			liberte(b);
+			if (argc == 2)
+				free_ints(args);
+			error("Error\n");
+		}
 		i++;
 	}
 	if (argc == 2)
