@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 14:19:22 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2025/01/02 10:15:05 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2025/01/02 10:18:32 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ t_list	*ft_lstnew(int nbr)
 	node->prev = NULL;
 	return (node);
 }
-
 
 int	ft_lstsize(t_list *lst)
 {

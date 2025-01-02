@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 13:39:31 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/31 22:34:39 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2025/01/02 10:19:22 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdbool.h>
-# include <limits.h> 
-# include <stdio.h>
-
-# define ARG_ERR "Bad Arguments"
-# define INT_ERR "Number isn't integer"
-# define SAME_ERR "There are same numbers in stack"
-# define SORTED_ERR "Stack is already sorted."
 
 typedef struct s_list
 {
