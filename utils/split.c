@@ -6,13 +6,13 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 21:39:01 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/31 23:10:23 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2025/01/02 10:22:00 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static char	**get_free(char **array, size_t i)
+static char	**split_free(char **array, size_t i)
 {
 	while (array[i] != NULL)
 		free(array[i++]);
@@ -20,7 +20,7 @@ static char	**get_free(char **array, size_t i)
 	return (NULL);
 }
 
-static int	word_count(const char *s, char c)
+static int	counter(const char *s, char c)
 {
 	int	i;
 
@@ -37,7 +37,7 @@ static int	word_count(const char *s, char c)
 	return (i);
 }
 
-static char	*get_mem(const char *s, char c)
+static char	*furky_alloc(const char *s, char c)
 {
 	char	*arr;
 	int		i;
@@ -65,7 +65,7 @@ char	**ft_split(const char *s, char c)
 	int		j;
 
 	j = 0;
-	array = (char **)malloc((word_count(s, c) + 1) * sizeof(char *));
+	array = (char **)malloc((counter(s, c) + 1) * sizeof(char *));
 	if (array == NULL)
 		return (NULL);
 	while (*s != '\0')
@@ -74,9 +74,9 @@ char	**ft_split(const char *s, char c)
 			s++;
 		if (*s != c && *s != '\0')
 		{
-			array[j] = get_mem(s, c);
+			array[j] = furky_alloc(s, c);
 			if (array[j] == NULL)
-				return (get_free(array, 0));
+				return (split_free(array, 0));
 			j++;
 		}
 		while (*s != c && *s != '\0')
