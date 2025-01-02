@@ -1,4 +1,5 @@
 NAME = push_swap
+
 SRCS = ps.c \
  	commands/push.c \
  	commands/rev_rot.c \
@@ -18,7 +19,6 @@ SRCS = ps.c \
 	utils/split.c \
 
 
-	 
 CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
@@ -26,7 +26,8 @@ CFLAGS = -Wall -Wextra -Werror
 OBJS = $(SRCS:.c=.o)
 RM = rm -f
 
-all: ${NAME} 
+all: ${NAME}
+ 
 ${NAME}: ${OBJS}
 	@${CC} ${CFLAGS} ${OBJS} -o ${NAME}
 
