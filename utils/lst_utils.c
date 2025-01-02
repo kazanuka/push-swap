@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 14:19:22 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/30 15:01:12 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2025/01/02 10:15:05 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,17 +54,20 @@ t_list	*ft_lstlast(t_list *lst)
 	return (lst);
 }
 
-t_list	*ft_lstnew(int content)
+t_list	*ft_lstnew(int nbr)
 {
-	t_list	*new;
+	t_list	*node;
 
-	new = (t_list *)malloc(sizeof(t_list));
-	if (!new)
+	node = malloc(sizeof(t_list));
+	if (!node)
 		return (NULL);
-	new->nbr = content;
-	new->next = NULL;
-	return (new);
+	node->nbr = nbr;
+	node->index = 0;
+	node->next = NULL;
+	node->prev = NULL;
+	return (node);
 }
+
 
 int	ft_lstsize(t_list *lst)
 {
