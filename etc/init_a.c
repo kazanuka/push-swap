@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 16:46:09 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/31 12:29:35 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2025/01/02 12:36:16 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ void	init_a(t_list **stack, int argc, char **argv)
 	}
 	indexer(stack);
 	if (argc == 2)
-		free_ints(args);
+		free_list(args);
 }

@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 20:38:03 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/31 23:10:49 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2025/01/02 12:35:27 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_isnum(char *num)
 	return (1);
 }
 
-void	free_ints(char **ints)
+void	free_list(char **ints)
 {
 	int	i;
 

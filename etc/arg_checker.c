@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 15:39:56 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2025/01/02 10:24:28 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2025/01/02 12:36:04 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static char	**prepare_args(int argc, char **argv)
 		args = ft_split(argv[1], ' ');
 		if (args == NULL)
 		{
-			free_ints(args);
+			free_list(args);
 			error("Error\n");
 		}
 	}
@@ -48,13 +48,13 @@ static void	validate_args(char **args, int argc)
 			|| (tmp < -2147483648 || tmp > 2147483647))
 		{
 			if (argc == 2)
-				free_ints(args);
+				free_list(args);
 			error("Error\n");
 		}
 		i++;
 	}
 	if (argc == 2)
-		free_ints(args);
+		free_list(args);
 }
 
 void	check_args(int argc, char **argv)
