@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 15:02:31 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/31 22:43:03 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2025/01/02 10:24:10 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ int	main(int argc, char **argv)
 {
 	t_list	**a;
 	t_list	**b;
-
+	
+	check_args(argc, argv);
 	a = (t_list **)malloc(sizeof(t_list *));
 	b = (t_list **)malloc(sizeof(t_list *));
 	if (!a || !b)
@@ -27,7 +28,6 @@ int	main(int argc, char **argv)
 	}
 	*a = NULL;
 	*b = NULL;
-	check_args(argc, argv, a, b);
 	init_a(a, argc, argv);
 	if (is_sorted(*a))
 	{
