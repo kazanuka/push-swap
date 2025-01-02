@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 17:26:39 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/31 23:12:08 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2025/01/02 10:35:47 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static	int	swap(t_list **stack)
 	next = head->next;
 	if (!head && !next)
 	{
-		liberte(stack);
+		stack_free(stack);
 		error("Error!");
 	}
 	tmp_val = head->nbr;

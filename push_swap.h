@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 13:39:31 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2025/01/02 10:23:51 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2025/01/02 10:33:29 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct s_list
 }					t_list;
 
 void	error(char *error);
-void	liberte(t_list **slave);
+void	stack_free(t_list **slave);
 void	check_args(int argc, char **argv);
 void	init_a(t_list **stack, int argc, char **argv);
 void	indexer(t_list **stack);

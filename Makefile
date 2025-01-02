@@ -21,7 +21,7 @@ SRCS = ps.c \
 	 
 CC = gcc
 
-CFLAGS =
+CFLAGS = -Wall -Wextra -Werror
 
 OBJS = $(SRCS:.c=.o)
 RM = rm -f
